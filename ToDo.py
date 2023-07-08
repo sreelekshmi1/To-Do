@@ -412,7 +412,14 @@ def logout():
  #logout end 
  
  #######################################################################################################################################################################################
-   
+  
+ 
+#logout starts
+@app.route('/logout1')
+def logout1():
+    session.pop('username', None)
+    return render_template('login.html')  
+ #logout end 
 
 if __name__ == '__main__':
     app.run()
